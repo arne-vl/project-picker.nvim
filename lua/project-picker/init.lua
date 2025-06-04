@@ -43,7 +43,6 @@ M.add_project = function(name, path)
 
     file:write(name .. "," .. path .. "\n")
     file:close()
-    print("Project added: " .. name)
 end
 
 M.delete_project = function(name)
@@ -80,8 +79,6 @@ M.delete_project = function(name)
         file:write(line .. "\n")
     end
     file:close()
-
-    print("Project deleted: " .. name)
 end
 
 M.project_picker = function(opts)
