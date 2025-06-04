@@ -111,10 +111,6 @@ M.project_picker = function(opts)
                 end,
             }),
             sorter = conf.generic_sorter(opts),
-	    layout_config = {
-		width = 0.5,
-		height = 0.5,
-	    },
         })
         :find()
 end
