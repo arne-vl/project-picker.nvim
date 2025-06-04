@@ -8,8 +8,9 @@ Telescope project navigator for neovim
     "arne-vl/project-picker.nvim",
     dependencies = { "nvim-telescope/telescope.nvim" },
     config = function()
+        local picker = require('project_picker')
         vim.keymap.set('n', '<leader>fp', function()
-            require('dev.project_picker').project_picker()
+            picker.project_picker()
         end, { desc = 'Open project picker' })
 
         vim.keymap.set('n', '<leader>ap', function()
@@ -25,7 +26,7 @@ Telescope project navigator for neovim
                 return
             end
 
-            require('dev.project_picker').add_project(name, path)
+            picker.add_project(name, path)
         end, { desc = 'Add project to picker' })
 
         vim.keymap.set('n', '<leader>dp', function()
@@ -35,7 +36,7 @@ Telescope project navigator for neovim
                 return
             end
 
-            require('dev.project_picker').delete_project(name)
+            picker.delete_project(name)
         end, { desc = 'Delete project from picker' })
     end
 }
