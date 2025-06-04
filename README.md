@@ -8,7 +8,8 @@ Telescope project navigator for neovim
     "arne-vl/project-picker.nvim",
     dependencies = { "nvim-telescope/telescope.nvim" },
     config = function()
-        local picker = require('project_picker')
+        local picker = require('project-picker')
+
         vim.keymap.set('n', '<leader>fp', function()
             picker.project_picker()
         end, { desc = 'Open project picker' })
